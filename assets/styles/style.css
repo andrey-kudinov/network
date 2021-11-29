@@ -1,0 +1,433 @@
+:root {
+  --first-color: #98a3fc;
+  --second-color: #585858;
+  --third-color: #0e1604;
+  --fourth-color: #5E5E5E;
+  --enable: #75c668;
+  --disable: #c4c4c4;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.network {
+  max-width: 800px;
+  min-height: 100vh;
+  border: 1px solid tomato;
+}
+
+.network__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 118px;
+  padding: 0 40px;
+  background: var(--first-color);
+}
+
+.network__logo {
+  width: 86px;
+  height: 59px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.network__avatar-small {
+  overflow: hidden;
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+}
+
+.network__content {
+  padding: 20px;
+}
+
+@media (min-width: 576px) {
+  .network__content {
+    padding: 20px 44px;
+  }
+}
+
+.network__info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+
+  grid-template-rows: auto;
+}
+
+@media (min-width: 768px) {
+  .network__info {
+    grid-template-columns: auto 1fr;
+
+    grid-template-rows: 1fr;
+  }
+}
+
+.network__avatar {
+  aspect-ratio: 1;
+  overflow: hidden;
+  flex-shrink: 0;
+  max-width: 296px;
+  max-height: 296px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .network__avatar {
+    margin: 0;
+  }
+}
+
+.network__main-info {
+  width: 100%;
+}
+
+.network__buttons {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 11px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .network__buttons {
+    margin: 0;
+  }
+}
+
+.network__send {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  width: 78px;
+  height: 78px;
+  border: none;
+  border-radius: 50%;
+  background: var(--first-color);
+}
+
+button {
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+button:hover {
+  opacity: .7;
+}
+
+button:active {
+  opacity: 1;
+}
+
+.network__send div {
+  width: 50px;
+  height: 70px;
+}
+
+.network__add {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  min-width: 272px;
+  padding: 0 20px;
+  border: 4px solid var(--first-color);
+  border-radius: 38px;
+  background: transparent;
+}
+
+.network__add div {
+  flex-shrink: 0;
+  width: 50px;
+  height: 35px;
+}
+
+.network__add span {
+  flex-shrink: 0;
+  margin: 0 auto;
+  color: var(--first-color);
+  font-size: 38px;
+}
+
+.network__name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+@media (min-width: 768px) {
+  .network__name {
+    justify-content: start;
+  }
+}
+
+.network__name h1 {
+  width: fit-content;
+  margin: 0 10px 0 0;
+  color: var(--first-color);
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.network__mark {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: var(--disable);
+}
+
+.network__mark-active {
+  background: var(--enable);
+}
+
+p {
+  margin: 0;
+  color: var(--second-color);
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.network__main-info p {
+  margin-top: 16px;
+}
+
+section:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+.network__description b {
+  font-weight: 500;
+}
+
+.network__friends {
+
+}
+
+.network__count {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: var(--third-color);
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.network__count h2 {
+  margin: 0;
+}
+
+.network__count span {
+  margin-left: 20px;
+  color: var(--third-color);
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.network__icons {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.network__icon {
+  text-align: center;
+}
+
+.network__icon:not(:last-child) {
+  margin-right: 36px;
+}
+
+.network__icon div {
+  overflow: hidden;
+  width: 148px;
+  height: 148px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+}
+
+.network__icon h5 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.network__song {
+  display: flex;
+  align-items: center;
+}
+
+.network__song:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.network__song-icon {
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 30px;
+  border-radius: 11px;
+}
+
+.network__song-info {
+  display: grid;
+  margin-right: auto;
+}
+
+.network__song-info span {
+  font-size: 28px;
+}
+
+@media (min-width: 576px) {
+  .network__song-info span {
+    font-size: 36px;
+  }
+}
+
+.network__like {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.network__like-hidden {
+  display: none;
+}
+
+.network__time {
+  margin-left: 20px;
+  font-size: 28px;
+}
+
+@media (min-width: 576px) {
+  .network__time {
+    font-size: 36px;
+  }
+}
+
+.network__image {
+  overflow: hidden;
+  width: 364px;
+  height: 298px;
+  border-radius: 20px;
+}
+
+.network__post {
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 39px;
+  padding: 30px;
+}
+
+.network__post-main {
+  display: flex;
+}
+
+.network__post-avatar {
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.network__post-content {
+  width: 100%;
+}
+
+.network__post-header {
+  display: flex;
+  align-items: center;
+}
+
+.network__post-header h4 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--third-color);
+  margin: 0 auto 0 0;
+}
+
+@media (min-width: 768px) {
+  .network__post-header h4 {
+    font-size: 36px;
+  }
+}
+
+.network__post-header span {
+  font-size: 20px;
+  color: var(--fourth-color);
+}
+
+@media (min-width: 768px) {
+  .network__post-header span {
+    font-size: 28px;
+  }
+}
+
+.network__post-content p {
+  margin-top: 10px;
+  color: var(--third-color);
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@media (min-width: 768px) {
+  .network__post-content p {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+.network__post-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.network__likes {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.network__post-footer span {
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--first-color);
+}
+
+@media (min-width: 768px) {
+  .network__post-footer span {
+    font-size: 28px;
+  }
+}
+
+.network__bubble {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.network__arrow {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.network__likes, .network__bubble, .network__arrow {
+  width: 25px;
+  height: 25px;
+}
+
+@media (min-width: 768px) {
+  .network__likes, .network__bubble, .network__arrow {
+    width: 50px;
+    height: 50px;
+  }
+}

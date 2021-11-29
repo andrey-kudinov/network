@@ -1,12 +1,216 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>Social Network</title>
-  <link href="normalize.css" rel="stylesheet" />
-  <link href="style.css" rel="stylesheet" />
-</head>
-<body>
-  <h1>Привет мир</h1>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Social Network</title>
+    <link href="./assets/styles/normalize.css" rel="stylesheet" />
+    <link href="./assets/styles/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="network">
+      <header class="network__header">
+        <a href="#" class="network__logo">
+          <img src="./assets/images/logo.svg" alt="logo cloud" />
+        </a>
+
+        <a href="#" class="network__avatar-small">
+          <img src="./assets/images/avatar-small.jpg" alt="user avatar" />
+        </a>
+      </header>
+      <main class="network__content">
+        <section class="network__info">
+          <div class="network__avatar">
+            <img src="./assets/images/avatar.jpg" alt="user avatar" />
+          </div>
+
+          <div class="network__main-info">
+            <div class="network__buttons">
+              <button class="network__send">
+                <div>
+                  <img src="./assets/images/send.png" alt="envelope" />
+                </div>
+              </button>
+              <button class="network__add">
+                <div>
+                  <img src="./assets/images/person.png" alt="person" />
+                </div>
+                <span>В друзьях</span>
+              </button>
+            </div>
+
+            <div class="network__name">
+              <h1>Зоя Мощная</h1>
+              <div class="network__mark network__mark-active"></div>
+            </div>
+            <p>@zoyapower</p>
+            <p>Кто со мной на двигательную практику?</p>
+          </div>
+        </section>
+
+        <section class="network__description">
+          <p>Живет в г. <b>Москва</b></p>
+          <p>Из г. <b>Нижний Новгородква</b></p>
+          <p>Учится в <b>ВШЭ, Психологическое консультирование</b></p>
+          <p>Училась в <b>МГУ, Политология</b></p>
+          <p>
+            Состоит в
+            <b
+              >Клиническая практика, FOOD NOT BOMBS, ФАР, Foodsharing, CO-TOUCH,
+              Айседорино Горе, КРАЙ, Фрига на районе, ...</b
+            >
+          </p>
+        </section>
+
+        <section class="network__friends">
+          <div class="network__count">
+            <h2>Общие друзья</h2><span>36</span>
+          </div>
+
+          <div class="network__icons">
+            <div class="network__icon">
+              <div>
+                <img src="./assets/images/user-1.jpg" alt="user avatar" />
+              </div>
+              <h5>Яна</h5>
+            </div>
+
+            <div class="network__icon">
+              <div>
+                <img src="./assets/images/user-2.jpg" alt="user avatar" />
+              </div>
+              <h5>Наташа</h5>
+            </div>
+
+            <div class="network__icon">
+              <div>
+                <img src="./assets/images/user-3.jpg" alt="user avatar" />
+              </div>
+              <h5>Армен</h5>
+            </div>
+
+            <div class="network__icon">
+              <div>
+                <img src="./assets/images/user-4.jpg" alt="user avatar" />
+              </div>
+              <h5>Полосатое</h5>
+            </div>
+          </div>
+        </section>
+
+        <section class="network__songs">
+          <h2>Музыка Зои</h2>
+          <div class="network__song">
+            <div class="network__song-icon">
+              <img src="./assets/images/song-icon.jpg" alt="song" />
+            </div>
+
+            <div class="network__song-info">
+              <span>
+                Техно-поэзия
+              </span>
+              <span>
+                <b>Борщевик</b>
+              </span>
+            </div>
+
+            <div class="network__like">
+              <img src="./assets/images/like.jpg" alt="like" />
+            </div>
+
+            <span class="network__time">4:27</span>
+          </div>
+
+          <div class="network__song">
+            <div class="network__song-icon">
+              <img src="./assets/images/song-icon.jpg" alt="song" />
+            </div>
+
+            <div class="network__song-info">
+              <span>
+                Паучий Череп
+              </span>
+              <span>
+                <b>Смерть всем державам</b>
+              </span>
+            </div>
+
+            <div class="network__like network__like-hidden">
+              <img src="./assets/images/like.jpg" alt="like" />
+            </div>
+
+            <span class="network__time">4:27</span>
+          </div>
+
+          <div class="network__song">
+            <div class="network__song-icon">
+              <img src="./assets/images/song-icon.jpg" alt="song" />
+            </div>
+
+            <div class="network__song-info">
+              <span>
+                Медитация
+              </span>
+              <span>
+                <b>Звенящие чаши чтобы усн...</b>
+              </span>
+            </div>
+
+            <div class="network__like network__like-hidden">
+              <img src="./assets/images/like.jpg" alt="like" />
+            </div>
+
+            <span class="network__time">32:14</span>
+          </div>
+        </section>
+
+        <section class="network__images">
+          <h2>Мои фотографии</h3>
+          <div class="network__image">
+            <img src="./assets/images/photo-example.jpg" alt="example" />
+          </div>
+        </section>
+
+        <section class="network__posts">
+          <h2>Посты</h3>
+          <div class="network__post">
+            <div class="network__post-main">
+              <div class="network__post-avatar">
+                <img src="./assets/images/avatar-small.jpg" alt="user avatar" />
+              </div>
+              <div class="network__post-content">
+                <div class="network__post-header">
+                  <h4>Оля Воронцова</h4>
+                  <span>26 Ноября 16:43</span>
+                </div>
+
+                <p>Ребята, спасибо всем за поддержку, я очень боялась писать этот пост, потому что все мы знаем, каково приходится тем, кто решается написать о своем опыте, я очень благодарна, каждой и каждому, кто написал мне что поддерживает и обнимает, и тем кто отвечал на жесткие комментарии многих наших общих знакомых. Я ограничила комментарии к тому посту, потому что мне пока сложно обсуждать эту историю</p>
+              </div>
+            </div>
+
+            <div class="network__post-footer">
+              <div class="network__likes">
+                <img src="./assets/images/empty-heart.png" alt="heart" />
+              </div>
+              <span>26</span>
+
+              <div class="network__bubble">
+                <img src="./assets/images/bubble.jpg" alt="bubble" />
+              </div>
+              <span>14</span>
+
+              <div class="network__arrow">
+                <img src="./assets/images/arrow.jpg" alt="arrow" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
