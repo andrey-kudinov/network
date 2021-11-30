@@ -447,7 +447,7 @@ h2 {
 
 @media (min-width: 768px) {
   .network__post-content p {
-    font-size: 36px;
+    font-size: 32px;
     line-height: 40px;
   }
 }
