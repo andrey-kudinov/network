@@ -500,7 +500,7 @@ h2 {
 }
 
 .network__post:not(:last-child) {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .network__post-main {
