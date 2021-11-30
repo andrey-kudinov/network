@@ -96,10 +96,17 @@ img {
   aspect-ratio: 1;
   overflow: hidden;
   flex-shrink: 0;
-  max-width: 296px;
-  max-height: 296px;
+  max-width: 150px;
+  max-height: 150px;
   margin: 0 auto;
   border-radius: 50%;
+}
+
+@media (min-width: 576px) {
+  .network__avatar {
+    max-width: 296px;
+    max-height: 296px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -130,11 +137,18 @@ img {
   display: grid;
   place-items: center;
   overflow: hidden;
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
   border: none;
   border-radius: 50%;
   background: var(--first-color);
+}
+
+@media (min-width: 576px) {
+  .network__send {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -149,6 +163,10 @@ button {
   transition: .3s ease;
 }
 
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 button:hover {
   opacity: .7;
 }
@@ -158,8 +176,15 @@ button:active {
 }
 
 .network__send div {
-  width: 25px;
-  height: 35px;
+  width: 17px;
+  height: 25px;
+}
+
+@media (min-width: 576px) {
+  .network__send div {
+    width: 25px;
+    height: 35px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -204,7 +229,13 @@ button:active {
   flex-shrink: 0;
   margin: 0 auto;
   color: var(--first-color);
-  font-size: 26px;
+  font-size: 18px;
+}
+
+@media (min-width: 576px) {
+  .network__add span {
+    font-size: 26px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -230,8 +261,14 @@ button:active {
   width: fit-content;
   margin: 0 10px 0 0;
   color: var(--first-color);
-  font-size: 44px;
+  font-size: 30px;
   font-weight: 700;
+}
+
+@media (min-width: 576px) {
+  .network__name h1 {
+    font-size: 44px;
+  }
 }
 
 .network__mark {
@@ -338,7 +375,8 @@ h2 {
   margin-right: 36px;
 }
 
-.network__icon div {
+.network__icon a {
+  display: block;
   overflow: hidden;
   width: 148px;
   height: 148px;
