@@ -482,7 +482,7 @@ h2 {
   }
 }
 
-.network__images {
+.network__images-container {
   overflow-x: scroll;
 }
 
