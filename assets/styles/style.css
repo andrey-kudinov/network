@@ -18,17 +18,33 @@ body {
 }
 
 .network__header {
+  position: fixed;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 118px;
+  height: 60px;
   padding: 0 40px;
   background: var(--first-color);
 }
 
+@media (min-width: 768px) {
+  .network__header {
+    height: 118px;
+  }
+}
+
 .network__logo {
-  width: 86px;
-  height: 59px;
+  width: 42px;
+  height: 30px;
+}
+
+@media (min-width: 768px) {
+  .network__logo {
+    width: 86px;
+    height: 59px;
+  }
 }
 
 img {
@@ -40,18 +56,25 @@ img {
 
 .network__avatar-small {
   overflow: hidden;
-  width: 83px;
-  height: 83px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
 }
 
+@media (min-width: 768px) {
+  .network__avatar-small {
+    width: 83px;
+    height: 83px;
+  }
+}
+
 .network__content {
-  padding: 20px;
+  padding: 80px 20px 20px;
 }
 
 @media (min-width: 768px) {
   .network__content {
-    padding: 32px 44px;
+    padding: 142px 44px 32px;
   }
 }
 
@@ -73,10 +96,17 @@ img {
   aspect-ratio: 1;
   overflow: hidden;
   flex-shrink: 0;
-  max-width: 296px;
-  max-height: 296px;
+  max-width: 150px;
+  max-height: 150px;
   margin: 0 auto;
   border-radius: 50%;
+}
+
+@media (min-width: 576px) {
+  .network__avatar {
+    max-width: 296px;
+    max-height: 296px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -107,11 +137,18 @@ img {
   display: grid;
   place-items: center;
   overflow: hidden;
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
   border: none;
   border-radius: 50%;
   background: var(--first-color);
+}
+
+@media (min-width: 576px) {
+  .network__send {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -126,6 +163,10 @@ button {
   transition: .3s ease;
 }
 
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 button:hover {
   opacity: .7;
 }
@@ -135,8 +176,15 @@ button:active {
 }
 
 .network__send div {
-  width: 25px;
-  height: 35px;
+  width: 17px;
+  height: 25px;
+}
+
+@media (min-width: 576px) {
+  .network__send div {
+    width: 25px;
+    height: 35px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -181,7 +229,13 @@ button:active {
   flex-shrink: 0;
   margin: 0 auto;
   color: var(--first-color);
-  font-size: 26px;
+  font-size: 18px;
+}
+
+@media (min-width: 576px) {
+  .network__add span {
+    font-size: 26px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -207,8 +261,14 @@ button:active {
   width: fit-content;
   margin: 0 10px 0 0;
   color: var(--first-color);
-  font-size: 44px;
+  font-size: 30px;
   font-weight: 700;
+}
+
+@media (min-width: 576px) {
+  .network__name h1 {
+    font-size: 44px;
+  }
 }
 
 .network__mark {
@@ -225,8 +285,15 @@ button:active {
 p {
   margin: 0;
   color: var(--second-color);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (min-width: 576px) {
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -256,8 +323,14 @@ section:not(:last-child) {
 h2 {
   margin: 0 0 16px 0;
   color: var(--third-color);
-  font-size: 36px;
+  font-size: 26px;
   font-weight: 700;
+}
+
+@media (min-width: 576px) {
+  h2 {
+    font-size: 36px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -273,8 +346,14 @@ h2 {
 .network__count span {
   margin-left: 20px;
   color: var(--third-color);
-  font-size: 36px;
+  font-size: 26px;
   font-weight: 400;
+}
+
+@media (min-width: 576px) {
+  .network__count span {
+    font-size: 36px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -296,7 +375,8 @@ h2 {
   margin-right: 36px;
 }
 
-.network__icon div {
+.network__icon a {
+  display: block;
   overflow: hidden;
   width: 148px;
   height: 148px;
@@ -306,8 +386,14 @@ h2 {
 
 .network__icon h5 {
   margin: 0;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  .network__icon h5 {
+    font-size: 24px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -329,7 +415,16 @@ h2 {
   overflow: hidden;
   flex-shrink: 0;
   margin-right: 30px;
+  width: 46px;
+  height: 46px;
   border-radius: 11px;
+}
+
+@media (min-width: 576px) {
+  .network__song-icon {
+    width: 92px;
+    height: 92px;
+  }
 }
 
 .network__song-info {
@@ -338,7 +433,13 @@ h2 {
 }
 
 .network__song-info span {
-  font-size: 28px;
+  font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  .network__song-info span {
+    font-size: 28px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -349,8 +450,15 @@ h2 {
 
 .network__like {
   flex-shrink: 0;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
+}
+
+@media (min-width: 576px) {
+  .network__like {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .network__like-hidden {
@@ -359,13 +467,23 @@ h2 {
 
 .network__time {
   margin-left: 20px;
-  font-size: 28px;
+  font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  .network__time {
+    font-size: 28px;
+  }
 }
 
 @media (min-width: 768px) {
   .network__time {
     font-size: 36px;
   }
+}
+
+.network__images-container {
+  overflow-x: scroll;
 }
 
 .network__image {
@@ -382,11 +500,18 @@ h2 {
 }
 
 .network__post:not(:last-child) {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .network__post-main {
   display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .network__post-main {
+    flex-wrap: nowrap;
+  }
 }
 
 .network__post-avatar {
@@ -406,19 +531,39 @@ h2 {
 }
 
 .network__post-content {
-  width: 100%;
+  width: fit-content;
+}
+
+@media (min-width: 768px) {
+  .network__post-content {
+    width: 100%;
+  }
 }
 
 .network__post-header {
-  display: flex;
+  display: grid;
   align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+@media (min-width: 576px) {
+  .network__post-header {
+    grid-auto-flow: column;
+  }
 }
 
 .network__post-header h4 {
   margin: 0 auto 0 0;
   color: var(--third-color);
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 700;
+}
+
+@media (min-width: 576px) {
+  .network__post-header h4 {
+    font-size: 28px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -429,7 +574,13 @@ h2 {
 
 .network__post-header span {
   color: var(--fourth-color);
-  font-size: 20px;
+  font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  .network__post-header span {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -438,17 +589,39 @@ h2 {
   }
 }
 
-.network__post-content p {
+.network__post-main .network__post-content p {
+  display: none;
   margin-top: 10px;
   color: var(--third-color);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 @media (min-width: 768px) {
-  .network__post-content p {
+  .network__post-main .network__post-content p {
+    display: block;
     font-size: 32px;
     line-height: 40px;
+  }
+}
+
+.network__post-main p {
+  margin-top: 10px;
+  color: var(--third-color);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (min-width: 576px) {
+  .network__post-main p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .network__post-main p {
+    display: none
   }
 }
 
@@ -465,8 +638,14 @@ h2 {
 
 .network__post-footer span {
   color: var(--first-color);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
+}
+
+@media (min-width: 576px) {
+  .network__post-footer span {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 768px) {
