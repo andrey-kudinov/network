@@ -19,8 +19,8 @@ body {
 
 .network__header {
   position: fixed;
-  left: 0;
   right: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -414,9 +414,9 @@ h2 {
 .network__song-icon {
   overflow: hidden;
   flex-shrink: 0;
-  margin-right: 30px;
   width: 46px;
   height: 46px;
+  margin-right: 30px;
   border-radius: 11px;
 }
 
@@ -542,9 +542,9 @@ h2 {
 
 .network__post-header {
   display: grid;
+  gap: 10px;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
 }
 
 @media (min-width: 576px) {
@@ -592,6 +592,7 @@ h2 {
 .network__post-main .network__post-content p {
   display: none;
   margin-top: 10px;
+  word-break: break-word;
   color: var(--third-color);
   font-size: 16px;
   line-height: 20px;
@@ -607,6 +608,7 @@ h2 {
 
 .network__post-main p {
   margin-top: 10px;
+  word-break: break-word;
   color: var(--third-color);
   font-size: 16px;
   line-height: 20px;
@@ -621,7 +623,7 @@ h2 {
 
 @media (min-width: 768px) {
   .network__post-main p {
-    display: none
+    display: none;
   }
 }
 
