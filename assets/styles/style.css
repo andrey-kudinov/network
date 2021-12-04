@@ -27,6 +27,8 @@ body {
   height: 60px;
   padding: 0 40px;
   background: var(--first-color);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
